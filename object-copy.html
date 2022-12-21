@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Different ways to copy an object=>---------------------------------------
+
+      // Craete a object
+      const A = {
+        fruit1: "Mango",
+        fruit2: "Apple",
+        price: {
+          Indore: "100",
+          Bhopal: "200",
+        },
+      };
+      // coping object 0000000000000000000
+      // using Spread...
+      let B = {
+        ...A,
+      };
+      console.log("@ copy(B)", B);
+
+      //   using object.assign() method
+
+      let C = Object.assign({}, A);
+      console.log("@ copy(C)", C);
+
+      let D = JSON.parse(JSON.stringify(A));
+      console.log("@ copy(D)", D);
+    </script>
+  </body>
+</html>
